@@ -27,9 +27,9 @@ app.get("/shop-detail",(req,res)=>{
 })
 // Route to handle form submission
 app.post("/sendMessage", (req, res) => {
-  const { "first-name": firstName, "last-name": lastName, email, message } = req.body;
+  const { "first-name": firstName, "last-name": lastName,number, email, message } = req.body;
 
-  const smsContent = `New form submission from ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`;
+  const smsContent = `New form submission from ${firstName} ${lastName}\nEmail: ${email}\nPhone No. ${number}\nMessage: ${message}`;
 
   client.messages
     .create({
