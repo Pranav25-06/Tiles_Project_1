@@ -4,6 +4,7 @@ const path = require("path");
 const twilio = require("twilio");
 require("dotenv").config();
 const app = express();
+const ejs = require("ejs");
 const port = 3000;
 
 // Twilio credentials
@@ -12,10 +13,11 @@ const client = twilio(process.env.accountSid, process.env.authToken);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname,"../frontend"))); 
-
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../frontend/views'));
 // Route to serve index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+  res.render("index.ejs");
 });
 
 // Route to handle form submission
