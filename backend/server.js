@@ -19,7 +19,12 @@ app.set('views', path.join(__dirname, '../frontend/views'));
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
-
+app.get("/shop-listing",(req,res)=>{
+  res.render("shop-listing.ejs");
+})
+app.get("/shop-detail",(req,res)=>{
+  res.render("shop-detail.ejs");
+})
 // Route to handle form submission
 app.post("/sendMessage", (req, res) => {
   const { "first-name": firstName, "last-name": lastName, email, message } = req.body;
