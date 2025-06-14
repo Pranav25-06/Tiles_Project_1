@@ -12,7 +12,10 @@
     <!-- Favicon -->
     <link href="images/favicon.ico" rel="icon" />
     <!-- CSS FILES -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -30,27 +33,55 @@
     <link href="css/owl.carousel.min.css" rel="stylesheet" />
 
     <link href="css/tooplate-moso-interior.css" rel="stylesheet" />
-    
-
   </head>
 
   <body>
-<div
-  id="popup-message"
-  class="hidden fixed top-6 right-6 z-[9999] bg-green-600 text-white text-sm px-5 py-3 rounded-lg shadow-lg transition-opacity duration-300 ease-in-out"
->
-  ✅ Your form has been submitted successfully!
-</div>
-     <%- include('navbar.ejs') %>
+    <!-- Pop Up Message when User submit the contact form -->
+    <div
+      id="popup-message"
+      class="popup-message hidden"
+      style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #f65129;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        font-weight: bold;
+      "
+    >
+      ✅ Form submitted successfully!
+    </div>
 
+    <!-- End -->
+
+    <!-- Navbar Start Here -->
+    <%- include('navbar.ejs') %>
+    <!-- Navbar End Here -->
     <main>
+      <!-- Home Section Start Here -->
       <%- include('home.ejs') %>
+      <!-- Hero Section Start Here -->
 
+      <!-- About Section Start Here -->
       <%- include('about.ejs') %>
+      <!-- About Section End Here -->
+
+      <!-- Shop Section Start Here -->
       <%- include('shop.ejs') %>
+      <!-- Shop Section End Here -->
+
+      <!-- Reviews Section Start Here -->
       <%- include('reviews.ejs') %>
+      <!-- Reviews Section End Here -->
+
+      <!-- Contact Section Start  Here -->
       <%- include('contact.ejs') %>
-      
+      <!-- Contact Section End Here -->
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#36363e"
@@ -59,32 +90,31 @@
         ></path>
       </svg>
     </main>
+
+    <!-- Footer Section Start Here -->
     <%- include('footer.ejs') %>
+    <!-- Footer Section End Here -->
+
     <!-- JAVASCRIPT FILES -->
-    <div id="popup-message" class="hidden fixed top-6 right-6 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
-           ✅ Your form has been submitted successfully!
-    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const popup = document.getElementById("popup-message");
 
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const popup = document.getElementById("popup-message");
-    
-    const success = params.get("success");
-    if (success === "1") {
-      popup.classList.remove("hidden");
+        const success = params.get("success");
+        if (success === "1") {
+          popup.classList.remove("hidden");
 
-      setTimeout(() => {
-        popup.classList.add("hidden");
+          setTimeout(() => {
+            popup.classList.add("hidden");
 
-        const url = new URL(window.location.href);
-        url.searchParams.delete("success");
-        window.history.replaceState({}, document.title, url.pathname);
-      }, 3000);
-    }
-  });
-</script>
-
+            const url = new URL(window.location.href);
+            url.searchParams.delete("success");
+            window.history.replaceState({}, document.title, url.pathname);
+          }, 6000);
+        }
+      });
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

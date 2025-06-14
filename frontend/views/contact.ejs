@@ -1,131 +1,143 @@
 <section class="contact-section" id="section_5">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#f9f9f9"
-            fill-opacity="1"
-            d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
-          ></path>
-        </svg>
-        <div class="container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#f9f9f9"
+      fill-opacity="1"
+      d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+    ></path>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <small class="section-small-title">Ask anything.</small>
+
+        <h2 class="mb-4">Say Hello</h2>
+      </div>
+
+      <div class="col-lg-6 col-12">
+        <form
+          class="custom-form contact-form"
+          action="/sendMessage"
+          method="post"
+          role="form"
+        >
           <div class="row">
-            <div class="col-lg-12 col-12">
-              <small class="section-small-title">Ask anything.</small>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="input-group align-items-center">
+                <label for="first-name">First Name: </label>
 
-              <h2 class="mb-4">Say Hello</h2>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  class="form-control"
+                  placeholder="Jack"
+                  required
+                />
+              </div>
             </div>
 
-            <div class="col-lg-6 col-12">
-              <form
-                class="custom-form contact-form"
-                action="/sendMessage"
-                method="post"
-                role="form"
-              >
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="input-group align-items-center">
-                      <label for="first-name">First Name</label>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="input-group align-items-center">
+                <label for="last-name">Last Name: </label>
 
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        class="form-control"
-                        placeholder="Jack"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="input-group align-items-center">
-                      <label for="last-name">Last Name</label>
-
-                      <input
-                        type="text"
-                        name="last-name"
-                        id="last-name"
-                        class="form-control"
-                        placeholder="Doe"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="input-group align-items-center">
-                  <label for="email">Email Address</label>
-
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    pattern="[^ @]*@[^ @]*"
-                    class="form-control"
-                    placeholder="Jackdoe@gmail.com"
-                    required
-                  />
-                </div>
-
-                <div class="input-group textarea-group">
-                  <label for="message">Message</label>
-
-                  <textarea
-                    name="message"
-                    rows="6"
-                    class="form-control"
-                    id="message"
-                    placeholder="What can we help you?"
-                  ></textarea>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6">
-                  <button type="submit" class="form-control">Send</button>
-                </div>
-              </form>
-            </div>
-
-            <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-              <div class="custom-block">
-                <h3 class="text-white mb-2">Store</h3>
-
-                <p class="text-white mb-2">
-                  <i class="contact-icon bi-geo-alt me-1"></i>
-                  Plot No. 28-29 Mauli Park, Karad, Tasgaon Road, Opposite
-                  Thorat Hospital, Satara, Maharashtra
-                </p>
-
-                <h3 class="text-white mt-3 mb-2">Contact Info</h3>
-
-                <div class="d-flex flex-wrap">
-                  <p class="text-white mb-2 me-4">
-                    <i class="contact-icon bi-telephone me-1"></i>
-
-                    <a href="tel: 090-080-0760" class="text-white">
-                      090-080-0760
-                    </a>
-                  </p>
-
-                  <p class="text-white">
-                    <i class="contact-icon bi-envelope me-1"></i>
-
-                    <a href="mailto:info@company.com" class="text-white">
-                      info@company.com
-                    </a>
-                  </p>
-                </div>
-
-                <iframe
-                  class="google-map mt-2"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d952.4724714335686!2d74.18955818721781!3d17.272561444297008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1825f1e071177%3A0xab8802e93657e6f6!2sMauli%20Hospital!5e0!3m2!1sen!2sin!4v1749400221807!5m2!1sen!2sin"
-                  width="100%"
-                  height="220"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                ></iframe>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  class="form-control"
+                  placeholder="Doe"
+                  required
+                />
               </div>
             </div>
           </div>
+
+          <div class="input-group align-items-center">
+            <label for="email">Mobile No.: </label>
+
+            <input
+              type="number"
+              name="number"
+              id="number"
+              pattern="^[6-9]\d{9}$"
+              class="form-control"
+              placeholder="93xxxxxx05"
+              required
+            />
+          </div>
+
+          <div class="input-group align-items-center">
+            <label for="email">Email Address: </label>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              pattern="[^ @]*@[^ @]*"
+              class="form-control"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="input-group textarea-group">
+            <label for="message">Message: </label>
+
+            <textarea
+              name="message"
+              rows="6"
+              class="form-control"
+              id="message"
+              placeholder="What can we help you?"
+            ></textarea>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <button type="submit" class="form-control">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+        <div class="custom-block">
+          <h3 class="text-white mb-2">Store</h3>
+
+          <p class="text-white mb-2">
+            <i class="contact-icon bi-geo-alt me-1"></i>
+            Plot No. 28-29 Mauli Park, Karad, Tasgaon Road, Opposite Thorat
+            Hospital, Satara, Maharashtra
+          </p>
+
+          <h3 class="text-white mt-3 mb-2">Contact Info</h3>
+
+          <div class="d-flex flex-wrap">
+            <p class="text-white mb-2 me-4">
+              <i class="contact-icon bi-telephone me-1"></i>
+
+              <a href="tel: 090-080-0760" class="text-white"> 090-080-0760 </a>
+            </p>
+
+            <p class="text-white">
+              <i class="contact-icon bi-envelope me-1"></i>
+
+              <a href="mailto:info@company.com" class="text-white">
+                yashadaprivate@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <iframe
+            class="google-map mt-2"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d952.4724714335686!2d74.18955818721781!3d17.272561444297008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1825f1e071177%3A0xab8802e93657e6f6!2sMauli%20Hospital!5e0!3m2!1sen!2sin!4v1749400221807!5m2!1sen!2sin"
+            width="100%"
+            height="220"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
