@@ -20,6 +20,6 @@ A responsive, full-stack website built for showcasing and managing tile product 
 | Bootstrap / Tailwind CSS | REST API | Dotenv for environment management |
 | Twilio SMS API (optional) |
 
-## 📁 Project Structure
+
 
 
